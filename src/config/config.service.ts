@@ -17,6 +17,7 @@ export class ConfigService {
   }
 
   public async getMongoConfig() {
+    console.log('mongodb+srv://' + (this.get('MONGO_PASSWORD') ? `${this.get('MONGO_USER') + ':' + this.get('MONGO_PASSWORD') + '@'}` : '') + this.get('MONGO_HOST') + '/' + this.get('MONGO_DATABASE'));
     return {
       uri: 'mongodb+srv://' + (this.get('MONGO_PASSWORD') ? `${this.get('MONGO_USER') + ':' + this.get('MONGO_PASSWORD') + '@'}` : '') + this.get('MONGO_HOST') + '/' + this.get('MONGO_DATABASE'),
     };
