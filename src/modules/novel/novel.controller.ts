@@ -34,7 +34,7 @@ export class NovelController {
   async createNovel(@Req() req: Request) {
     return this.novelService.createNovel({
       ...req.body,
-      creater: '6521898fdeccd2b991f5dca6', // fake user
+      creater: '65219c585ba5c5ed02b47afd', // fake user
     })
   }
 }
